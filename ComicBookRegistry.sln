@@ -7,7 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{25044FAD-E81
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7169907E-05E3-4A29-8698-86A740042DC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComicBookRegistry.UI", "ComicBookRegistry.UI\ComicBookRegistry.UI.csproj", "{00D50AFB-1B33-4E3B-812D-EBC15B4C62EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComicBookRegistry.UI", "ComicBookRegistry.UI\ComicBookRegistry.UI.csproj", "{00D50AFB-1B33-4E3B-812D-EBC15B4C62EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComicBookRegistry.Domain", "ComicBookRegistry.Domain\ComicBookRegistry.Domain.csproj", "{784EECB5-DAB1-4632-B486-12579BF04E21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,12 +21,17 @@ Global
 		{00D50AFB-1B33-4E3B-812D-EBC15B4C62EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00D50AFB-1B33-4E3B-812D-EBC15B4C62EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00D50AFB-1B33-4E3B-812D-EBC15B4C62EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{784EECB5-DAB1-4632-B486-12579BF04E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{784EECB5-DAB1-4632-B486-12579BF04E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{784EECB5-DAB1-4632-B486-12579BF04E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{784EECB5-DAB1-4632-B486-12579BF04E21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{00D50AFB-1B33-4E3B-812D-EBC15B4C62EE} = {25044FAD-E81F-41ED-9F0D-F45B3F4522B0}
+		{784EECB5-DAB1-4632-B486-12579BF04E21} = {25044FAD-E81F-41ED-9F0D-F45B3F4522B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35C616C5-8CF4-4915-8EFB-FBC419A3AA93}
