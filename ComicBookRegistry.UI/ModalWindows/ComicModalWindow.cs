@@ -14,5 +14,10 @@ namespace ComicBookRegistry.UI.ModalWindows
         {
             Debug.WriteLine("Uploading new image for comic book cover.");
         }
+
+        private void ButtonSave_Click(object sender, System.EventArgs e)
+        {
+            Debug.WriteLine("Saving comic book data to database.");
+        }
     }
 }

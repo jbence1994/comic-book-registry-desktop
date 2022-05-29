@@ -72,6 +72,7 @@
             this.buttonSave.TabIndex = 1;
             this.buttonSave.Text = "Mentés";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
             // textBoxTitle
             // 
