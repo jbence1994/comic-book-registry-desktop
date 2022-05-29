@@ -33,6 +33,7 @@
             this.groupBoxComicData = new System.Windows.Forms.GroupBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
+            this.textBoxISBN = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.groupBoxComicData.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +53,7 @@
             // 
             // groupBoxComicData
             // 
+            this.groupBoxComicData.Controls.Add(this.textBoxISBN);
             this.groupBoxComicData.Controls.Add(this.buttonSave);
             this.groupBoxComicData.Controls.Add(this.textBoxTitle);
             this.groupBoxComicData.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -69,7 +71,7 @@
             this.buttonSave.Location = new System.Drawing.Point(6, 495);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(390, 36);
-            this.buttonSave.TabIndex = 1;
+            this.buttonSave.TabIndex = 5;
             this.buttonSave.Text = "Mentés";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.ButtonSave_Click);
@@ -81,7 +83,16 @@
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.PlaceholderText = "Képregény címe";
             this.textBoxTitle.Size = new System.Drawing.Size(390, 33);
-            this.textBoxTitle.TabIndex = 0;
+            this.textBoxTitle.TabIndex = 2;
+            // 
+            // textBoxISBN
+            // 
+            this.textBoxISBN.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxISBN.Location = new System.Drawing.Point(6, 101);
+            this.textBoxISBN.Name = "textBoxISBN";
+            this.textBoxISBN.PlaceholderText = "ISBN szám";
+            this.textBoxISBN.Size = new System.Drawing.Size(390, 33);
+            this.textBoxISBN.TabIndex = 3;
             // 
             // ComicModalWindow
             // 
@@ -108,5 +119,6 @@
         private System.Windows.Forms.GroupBox groupBoxComicData;
         private System.Windows.Forms.TextBox textBoxTitle;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.TextBox textBoxISBN;
     }
 }
