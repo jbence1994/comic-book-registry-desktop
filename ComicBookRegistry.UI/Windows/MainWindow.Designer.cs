@@ -34,8 +34,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1008, 729);
-            this.ForeColor = System.Drawing.Color.White;
             this.Name = "MainWindow";
             this.Text = "Képregény nyilvántartó";
             this.ResumeLayout(false);
