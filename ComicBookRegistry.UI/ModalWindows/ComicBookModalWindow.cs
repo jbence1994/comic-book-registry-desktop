@@ -11,7 +11,7 @@ namespace ComicBookRegistry.UI.ModalWindows
             InitializeComponent();
         }
 
-        private void PictureBoxComicBookCover_Click(object sender, EventArgs e)
+        private void PictureBoxPhoto_Click(object sender, EventArgs e)
         {
             Debug.WriteLine("Uploading new photo for comic book.");
         }
