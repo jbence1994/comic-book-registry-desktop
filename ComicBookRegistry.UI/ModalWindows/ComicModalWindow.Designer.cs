@@ -31,9 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComicModalWindow));
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.groupBoxComicData = new System.Windows.Forms.GroupBox();
+            this.textBoxISBN = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
-            this.textBoxISBN = new System.Windows.Forms.TextBox();
+            this.buttonCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.groupBoxComicData.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +54,7 @@
             // 
             // groupBoxComicData
             // 
+            this.groupBoxComicData.Controls.Add(this.buttonCancel);
             this.groupBoxComicData.Controls.Add(this.textBoxISBN);
             this.groupBoxComicData.Controls.Add(this.buttonSave);
             this.groupBoxComicData.Controls.Add(this.textBoxTitle);
@@ -65,10 +67,19 @@
             this.groupBoxComicData.TabStop = false;
             this.groupBoxComicData.Text = "Képregény adatai";
             // 
+            // textBoxISBN
+            // 
+            this.textBoxISBN.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxISBN.Location = new System.Drawing.Point(6, 101);
+            this.textBoxISBN.Name = "textBoxISBN";
+            this.textBoxISBN.PlaceholderText = "ISBN szám";
+            this.textBoxISBN.Size = new System.Drawing.Size(390, 33);
+            this.textBoxISBN.TabIndex = 3;
+            // 
             // buttonSave
             // 
             this.buttonSave.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonSave.Location = new System.Drawing.Point(6, 495);
+            this.buttonSave.Location = new System.Drawing.Point(6, 453);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(390, 36);
             this.buttonSave.TabIndex = 4;
@@ -85,14 +96,16 @@
             this.textBoxTitle.Size = new System.Drawing.Size(390, 33);
             this.textBoxTitle.TabIndex = 2;
             // 
-            // textBoxISBN
+            // buttonCancel
             // 
-            this.textBoxISBN.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxISBN.Location = new System.Drawing.Point(6, 101);
-            this.textBoxISBN.Name = "textBoxISBN";
-            this.textBoxISBN.PlaceholderText = "ISBN szám";
-            this.textBoxISBN.Size = new System.Drawing.Size(390, 33);
-            this.textBoxISBN.TabIndex = 3;
+            this.buttonCancel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonCancel.Location = new System.Drawing.Point(6, 495);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(390, 36);
+            this.buttonCancel.TabIndex = 5;
+            this.buttonCancel.Text = "Mégse";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // ComicModalWindow
             // 
@@ -120,5 +133,6 @@
         private System.Windows.Forms.TextBox textBoxTitle;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.TextBox textBoxISBN;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }
