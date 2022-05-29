@@ -71,7 +71,7 @@
             this.buttonSave.Location = new System.Drawing.Point(6, 495);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(390, 36);
-            this.buttonSave.TabIndex = 5;
+            this.buttonSave.TabIndex = 4;
             this.buttonSave.Text = "Mentés";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.ButtonSave_Click);
