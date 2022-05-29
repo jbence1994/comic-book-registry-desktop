@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComicModalWindow));
             this.pictureBoxComicBookCover = new System.Windows.Forms.PictureBox();
+            this.groupBoxComicBookData = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxComicBookCover)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,12 +47,23 @@
             this.pictureBoxComicBookCover.TabStop = false;
             this.pictureBoxComicBookCover.Click += new System.EventHandler(this.PictureBoxComicBookCover_Click);
             // 
+            // groupBoxComicBookData
+            // 
+            this.groupBoxComicBookData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxComicBookData.Location = new System.Drawing.Point(302, 0);
+            this.groupBoxComicBookData.Name = "groupBoxComicBookData";
+            this.groupBoxComicBookData.Size = new System.Drawing.Size(402, 537);
+            this.groupBoxComicBookData.TabIndex = 1;
+            this.groupBoxComicBookData.TabStop = false;
+            this.groupBoxComicBookData.Text = "Képregény adatai";
+            // 
             // ComicModalWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(704, 537);
+            this.Controls.Add(this.groupBoxComicBookData);
             this.Controls.Add(this.pictureBoxComicBookCover);
             this.Name = "ComicModalWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -64,5 +76,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxComicBookCover;
+        private System.Windows.Forms.GroupBox groupBoxComicBookData;
     }
 }
