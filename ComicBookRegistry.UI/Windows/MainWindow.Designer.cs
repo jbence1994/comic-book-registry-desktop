@@ -40,6 +40,7 @@
             this.buttonAddComic.TabIndex = 0;
             this.buttonAddComic.Text = "Képregény hozzáadása";
             this.buttonAddComic.UseVisualStyleBackColor = true;
+            this.buttonAddComic.Click += new System.EventHandler(this.ButtonAddComic_Click);
             // 
             // MainWindow
             // 

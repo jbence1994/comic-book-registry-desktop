@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace ComicBookRegistry.UI.Windows
@@ -15,6 +9,11 @@ namespace ComicBookRegistry.UI.Windows
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ButtonAddComic_Click(object sender, EventArgs e)
+        {
+            Debug.WriteLine("Opening modal window for creating a new comic.");
         }
     }
 }
