@@ -68,7 +68,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ComicModalWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Képregény";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxComicBookCover)).EndInit();
             this.ResumeLayout(false);
 
