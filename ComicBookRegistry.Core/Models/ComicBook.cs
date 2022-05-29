@@ -1,10 +1,10 @@
 ﻿namespace ComicBookRegistry.Core.Models
 {
-    public class Comic
+    public class ComicBook
     {
         public int Id { get; set; }
         public string Title { get; set; }
         public string ISBN { get; set; }
-        public ComicPhoto Photo { get; set; }
+        public ComicBookPhoto Photo { get; set; }
     }
 }
