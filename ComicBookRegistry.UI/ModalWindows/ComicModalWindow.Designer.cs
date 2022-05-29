@@ -65,6 +65,7 @@
             this.ClientSize = new System.Drawing.Size(704, 537);
             this.Controls.Add(this.groupBoxComicData);
             this.Controls.Add(this.pictureBoxComicBookCover);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ComicModalWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Képregény";
