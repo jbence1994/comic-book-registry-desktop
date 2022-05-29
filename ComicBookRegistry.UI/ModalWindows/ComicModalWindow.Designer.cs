@@ -28,7 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComicModalWindow));
+            this.pictureBoxComicBookCover = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxComicBookCover)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pictureBoxComicBookCover
+            // 
+            this.pictureBoxComicBookCover.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBoxComicBookCover.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxComicBookCover.Image")));
+            this.pictureBoxComicBookCover.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxComicBookCover.InitialImage")));
+            this.pictureBoxComicBookCover.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxComicBookCover.Name = "pictureBoxComicBookCover";
+            this.pictureBoxComicBookCover.Size = new System.Drawing.Size(302, 537);
+            this.pictureBoxComicBookCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxComicBookCover.TabIndex = 0;
+            this.pictureBoxComicBookCover.TabStop = false;
             // 
             // ComicModalWindow
             // 
@@ -36,13 +51,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(704, 537);
+            this.Controls.Add(this.pictureBoxComicBookCover);
             this.Name = "ComicModalWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Képregény";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxComicBookCover)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox pictureBoxComicBookCover;
     }
 }
