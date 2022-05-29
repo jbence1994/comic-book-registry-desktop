@@ -1,4 +1,4 @@
-﻿namespace ComicBookRegistry.Domain.Contants
+﻿namespace ComicBookRegistry.Domain.Constants
 {
     public static class FileConstants
     {
