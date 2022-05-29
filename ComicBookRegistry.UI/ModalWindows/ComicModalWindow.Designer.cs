@@ -44,6 +44,7 @@
             this.pictureBoxComicBookCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxComicBookCover.TabIndex = 0;
             this.pictureBoxComicBookCover.TabStop = false;
+            this.pictureBoxComicBookCover.Click += new System.EventHandler(this.PictureBoxComicBookCover_Click);
             // 
             // ComicModalWindow
             // 
