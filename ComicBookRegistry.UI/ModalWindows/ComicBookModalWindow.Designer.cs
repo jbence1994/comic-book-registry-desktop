@@ -1,6 +1,6 @@
 ﻿namespace ComicBookRegistry.UI.ModalWindows
 {
-    partial class ComicModalWindow
+    partial class ComicBookModalWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComicModalWindow));
-            this.pictureBoxImage = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComicBookModalWindow));
+            this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
             this.groupBoxComicData = new System.Windows.Forms.GroupBox();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.textBoxISBN = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
-            this.buttonCancel = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
             this.groupBoxComicData.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBoxImage
+            // pictureBoxPhoto
             // 
-            this.pictureBoxImage.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBoxImage.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxImage.Image")));
-            this.pictureBoxImage.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxImage.InitialImage")));
-            this.pictureBoxImage.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxImage.Name = "pictureBoxImage";
-            this.pictureBoxImage.Size = new System.Drawing.Size(302, 537);
-            this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxImage.TabIndex = 0;
-            this.pictureBoxImage.TabStop = false;
-            this.pictureBoxImage.Click += new System.EventHandler(this.PictureBoxComicBookCover_Click);
+            this.pictureBoxPhoto.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBoxPhoto.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPhoto.Image")));
+            this.pictureBoxPhoto.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxPhoto.InitialImage")));
+            this.pictureBoxPhoto.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxPhoto.Name = "pictureBoxPhoto";
+            this.pictureBoxPhoto.Size = new System.Drawing.Size(302, 537);
+            this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxPhoto.TabIndex = 0;
+            this.pictureBoxPhoto.TabStop = false;
+            this.pictureBoxPhoto.Click += new System.EventHandler(this.PictureBoxComicBookCover_Click);
             // 
             // groupBoxComicData
             // 
@@ -66,6 +66,17 @@
             this.groupBoxComicData.TabIndex = 1;
             this.groupBoxComicData.TabStop = false;
             this.groupBoxComicData.Text = "Képregény adatai";
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonCancel.Location = new System.Drawing.Point(6, 495);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(390, 36);
+            this.buttonCancel.TabIndex = 5;
+            this.buttonCancel.Text = "Mégse";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // textBoxISBN
             // 
@@ -96,30 +107,19 @@
             this.textBoxTitle.Size = new System.Drawing.Size(390, 33);
             this.textBoxTitle.TabIndex = 2;
             // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonCancel.Location = new System.Drawing.Point(6, 495);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(390, 36);
-            this.buttonCancel.TabIndex = 5;
-            this.buttonCancel.Text = "Mégse";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
-            // 
-            // ComicModalWindow
+            // ComicBookModalWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(704, 537);
             this.Controls.Add(this.groupBoxComicData);
-            this.Controls.Add(this.pictureBoxImage);
+            this.Controls.Add(this.pictureBoxPhoto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
-            this.Name = "ComicModalWindow";
+            this.Name = "ComicBookModalWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).EndInit();
             this.groupBoxComicData.ResumeLayout(false);
             this.groupBoxComicData.PerformLayout();
             this.ResumeLayout(false);
@@ -128,7 +128,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBoxImage;
+        private System.Windows.Forms.PictureBox pictureBoxPhoto;
         private System.Windows.Forms.GroupBox groupBoxComicData;
         private System.Windows.Forms.TextBox textBoxTitle;
         private System.Windows.Forms.Button buttonSave;
