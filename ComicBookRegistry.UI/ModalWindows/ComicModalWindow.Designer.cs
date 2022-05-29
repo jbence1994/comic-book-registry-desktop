@@ -29,33 +29,46 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComicModalWindow));
-            this.pictureBoxComicBookCover = new System.Windows.Forms.PictureBox();
+            this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.groupBoxComicData = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxComicBookCover)).BeginInit();
+            this.textBoxTitle = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
+            this.groupBoxComicData.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBoxComicBookCover
+            // pictureBoxImage
             // 
-            this.pictureBoxComicBookCover.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBoxComicBookCover.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxComicBookCover.Image")));
-            this.pictureBoxComicBookCover.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxComicBookCover.InitialImage")));
-            this.pictureBoxComicBookCover.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxComicBookCover.Name = "pictureBoxComicBookCover";
-            this.pictureBoxComicBookCover.Size = new System.Drawing.Size(302, 537);
-            this.pictureBoxComicBookCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxComicBookCover.TabIndex = 0;
-            this.pictureBoxComicBookCover.TabStop = false;
-            this.pictureBoxComicBookCover.Click += new System.EventHandler(this.PictureBoxComicBookCover_Click);
+            this.pictureBoxImage.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBoxImage.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxImage.Image")));
+            this.pictureBoxImage.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxImage.InitialImage")));
+            this.pictureBoxImage.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxImage.Name = "pictureBoxImage";
+            this.pictureBoxImage.Size = new System.Drawing.Size(302, 537);
+            this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxImage.TabIndex = 0;
+            this.pictureBoxImage.TabStop = false;
+            this.pictureBoxImage.Click += new System.EventHandler(this.PictureBoxComicBookCover_Click);
             // 
             // groupBoxComicData
             // 
+            this.groupBoxComicData.Controls.Add(this.textBoxTitle);
             this.groupBoxComicData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxComicData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBoxComicData.Location = new System.Drawing.Point(302, 0);
             this.groupBoxComicData.Name = "groupBoxComicData";
             this.groupBoxComicData.Size = new System.Drawing.Size(402, 537);
             this.groupBoxComicData.TabIndex = 1;
             this.groupBoxComicData.TabStop = false;
             this.groupBoxComicData.Text = "Képregény adatai";
+            // 
+            // textBoxTitle
+            // 
+            this.textBoxTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxTitle.Location = new System.Drawing.Point(6, 62);
+            this.textBoxTitle.Name = "textBoxTitle";
+            this.textBoxTitle.PlaceholderText = "Képregény címe";
+            this.textBoxTitle.Size = new System.Drawing.Size(390, 33);
+            this.textBoxTitle.TabIndex = 0;
             // 
             // ComicModalWindow
             // 
@@ -64,18 +77,21 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(704, 537);
             this.Controls.Add(this.groupBoxComicData);
-            this.Controls.Add(this.pictureBoxComicBookCover);
+            this.Controls.Add(this.pictureBoxImage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ComicModalWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxComicBookCover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
+            this.groupBoxComicData.ResumeLayout(false);
+            this.groupBoxComicData.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBoxComicBookCover;
+        private System.Windows.Forms.PictureBox pictureBoxImage;
         private System.Windows.Forms.GroupBox groupBoxComicData;
+        private System.Windows.Forms.TextBox textBoxTitle;
     }
 }
