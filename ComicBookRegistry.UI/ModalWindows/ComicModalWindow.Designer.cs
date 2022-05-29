@@ -37,6 +37,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(704, 537);
             this.Name = "ComicModalWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Képregény";
             this.ResumeLayout(false);
 
