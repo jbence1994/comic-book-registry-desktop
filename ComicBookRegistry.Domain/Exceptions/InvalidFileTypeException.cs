@@ -6,7 +6,6 @@ namespace ComicBookRegistry.Domain.Exceptions
     {
         public InvalidFileTypeException()
             : base("Invalid file type.")
-
         {
         }
     }
