@@ -37,7 +37,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "ComicModalWindow";
-            this.Text = "ComicModalWindow";
+            this.Text = "Képregény";
             this.ResumeLayout(false);
 
         }
