@@ -1,6 +1,6 @@
 ﻿namespace ComicBookRegistry.UI.ModalWindows
 {
-    partial class ComicModalWindow
+    partial class ComicBookModalWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComicModalWindow));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComicBookModalWindow));
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.groupBoxComicData = new System.Windows.Forms.GroupBox();
             this.textBoxISBN = new System.Windows.Forms.TextBox();

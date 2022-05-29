@@ -15,7 +15,7 @@ namespace ComicBookRegistry.UI
             var host = Host.CreateDefaultBuilder()
                 .ConfigureServices(services =>
                 {
-                    services.AddScoped<ComicModalWindow>();
+                    services.AddScoped<ComicBookModalWindow>();
                     services.AddScoped<MainWindow>();
                 })
                 .Build();

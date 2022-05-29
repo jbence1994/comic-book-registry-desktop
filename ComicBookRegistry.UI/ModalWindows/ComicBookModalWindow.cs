@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace ComicBookRegistry.UI.ModalWindows
 {
-    public partial class ComicModalWindow : Form
+    public partial class ComicBookModalWindow : Form
     {
-        public ComicModalWindow()
+        public ComicBookModalWindow()
         {
             InitializeComponent();
         }
