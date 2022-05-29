@@ -6,18 +6,18 @@ namespace ComicBookRegistry.UI.Windows
 {
     public partial class MainWindow : Form
     {
-        private readonly ComicModalWindow _comicModalWindow;
+        private readonly ComicBookModalWindow _comicBookModalWindow;
 
-        public MainWindow(ComicModalWindow comicModalWindow)
+        public MainWindow(ComicBookModalWindow comicBookModalWindow)
         {
             InitializeComponent();
 
-            _comicModalWindow = comicModalWindow;
+            _comicBookModalWindow = comicBookModalWindow;
         }
 
         private void ButtonAddComic_Click(object sender, EventArgs e)
         {
-            _comicModalWindow.ShowDialog();
+            _comicBookModalWindow.ShowDialog();
         }
     }
 }
