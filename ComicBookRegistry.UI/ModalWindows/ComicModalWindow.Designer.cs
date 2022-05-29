@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComicModalWindow));
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.groupBoxComicData = new System.Windows.Forms.GroupBox();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.groupBoxComicData.SuspendLayout();
@@ -51,15 +52,26 @@
             // 
             // groupBoxComicData
             // 
+            this.groupBoxComicData.Controls.Add(this.buttonSave);
             this.groupBoxComicData.Controls.Add(this.textBoxTitle);
             this.groupBoxComicData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxComicData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBoxComicData.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBoxComicData.Location = new System.Drawing.Point(302, 0);
             this.groupBoxComicData.Name = "groupBoxComicData";
             this.groupBoxComicData.Size = new System.Drawing.Size(402, 537);
             this.groupBoxComicData.TabIndex = 1;
             this.groupBoxComicData.TabStop = false;
             this.groupBoxComicData.Text = "Képregény adatai";
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSave.Location = new System.Drawing.Point(6, 495);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(390, 36);
+            this.buttonSave.TabIndex = 1;
+            this.buttonSave.Text = "Mentés";
+            this.buttonSave.UseVisualStyleBackColor = true;
             // 
             // textBoxTitle
             // 
@@ -94,5 +106,6 @@
         private System.Windows.Forms.PictureBox pictureBoxImage;
         private System.Windows.Forms.GroupBox groupBoxComicData;
         private System.Windows.Forms.TextBox textBoxTitle;
+        private System.Windows.Forms.Button buttonSave;
     }
 }
