@@ -1,19 +1,23 @@
-﻿using System;
-using System.Diagnostics;
+﻿using ComicBookRegistry.UI.ModalWindows;
+using System;
 using System.Windows.Forms;
 
 namespace ComicBookRegistry.UI.Windows
 {
     public partial class MainWindow : Form
     {
-        public MainWindow()
+        private readonly ComicModalWindow _comicModalWindow;
+
+        public MainWindow(ComicModalWindow comicModalWindow)
         {
             InitializeComponent();
+
+            _comicModalWindow = comicModalWindow;
         }
 
         private void ButtonAddComic_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine("Opening modal window for creating a new comic.");
+            _comicModalWindow.ShowDialog();
         }
     }
 }
