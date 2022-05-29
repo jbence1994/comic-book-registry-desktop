@@ -13,12 +13,12 @@ namespace ComicBookRegistry.UI.ModalWindows
 
         private void PictureBoxComicBookCover_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine("Uploading new image for comic book cover.");
+            Debug.WriteLine("Uploading new photo for comic book.");
         }
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine("Saving comic book data to database.");
+            Debug.WriteLine("Saving comic book to database.");
         }
 
         private void ButtonCancel_Click(object sender, EventArgs e)
