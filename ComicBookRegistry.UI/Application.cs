@@ -1,3 +1,4 @@
+using ComicBookRegistry.UI.ModalWindows;
 using ComicBookRegistry.UI.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -14,6 +15,7 @@ namespace ComicBookRegistry.UI
             var host = Host.CreateDefaultBuilder()
                 .ConfigureServices(services =>
                 {
+                    services.AddScoped<ComicModalWindow>();
                     services.AddScoped<MainWindow>();
                 })
                 .Build();
