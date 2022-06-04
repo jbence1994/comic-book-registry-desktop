@@ -1,5 +1,4 @@
-﻿using ComicBookRegistry.Application.Dtos;
-using ComicBookRegistry.Application.Mapping;
+﻿using ComicBookRegistry.Application.Mapping;
 using ComicBookRegistry.Domain.Services;
 using System;
 using System.Diagnostics;
@@ -31,14 +30,11 @@ namespace ComicBookRegistry.UI.ModalWindows
         {
             if (_openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                var fileName = _openFileDialog.FileName;
-                var fileToUploadWithFullSourcePath = Path.GetFullPath(fileName);
-                var file = new FileInfo(fileToUploadWithFullSourcePath);
+                var contentRootPath = System.Windows.Forms.Application.StartupPath;
+                var file = new FileInfo(Path.GetFullPath(_openFileDialog.FileName));
                 var photoToUploadDto = _fileInfoToFileToUploadDtoMapper.Map(file);
 
-                var contentRootPath = System.Windows.Forms.Application.StartupPath;
-
-                var photo = _comicBookPhotoService.UploadPhoto(contentRootPath, photoToUploadDto, 1);
+                var uploadedComicBookPhoto = _comicBookPhotoService.UploadPhoto(contentRootPath, photoToUploadDto, 1);
             }
         }
 
