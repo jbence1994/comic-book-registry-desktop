@@ -3,6 +3,7 @@ using ComicBookRegistry.Core.Repositories;
 using ComicBookRegistry.Domain.Constants;
 using ComicBookRegistry.Domain.Exceptions;
 using ComicBookRegistry.Domain.Utilities;
+using ComicBookRegistry.Domain.Validation;
 using System.IO;
 
 namespace ComicBookRegistry.Domain.Services
@@ -11,14 +12,17 @@ namespace ComicBookRegistry.Domain.Services
     {
         private readonly IComicBookRepository _comicBookRepository;
         private readonly FileUtils _fileUtils;
+        private readonly FileValidator _fileValidator;
 
         public ComicBookPhotoService(
             IComicBookRepository comicBookRepository,
-            FileUtils fileUtils
+            FileUtils fileUtils,
+            FileValidator fileValidator
         )
         {
             _comicBookRepository = comicBookRepository;
             _fileUtils = fileUtils;
+            _fileValidator = fileValidator;
         }
 
         public byte[] GetPhoto(string fileName)
@@ -39,7 +43,7 @@ namespace ComicBookRegistry.Domain.Services
 
         public ComicBookPhoto UploadPhoto(string contentRootPath, FileInfo file, int id)
         {
-            _fileUtils.Validate(file);
+            _fileValidator.Validate(file);
 
             var comicBook = _comicBookRepository.GetComicBook(id);
 
