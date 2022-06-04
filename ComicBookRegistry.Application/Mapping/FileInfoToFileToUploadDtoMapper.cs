@@ -5,11 +5,12 @@ namespace ComicBookRegistry.Application.Mapping
 {
     public class FileInfoToFileToUploadDtoMapper
     {
-        public FileToUploadDto MapFrom(FileInfo fileInfo)
+        public FileToUploadDto Map(FileInfo fileInfo)
         {
             return new FileToUploadDto
             {
                 Name = fileInfo.Name,
+                FullQualifiedPathWithFileName = fileInfo.FullName,
                 Length = fileInfo.Length
             };
         }
