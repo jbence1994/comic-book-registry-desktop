@@ -2,7 +2,7 @@
 {
     public static class FileConstants
     {
-        public const string ComicBookPhotoUploadsDirectoryPath = "uploads/comic_books";
+        public const string ComicBookPhotoUploadsDirectoryPath = "uploads";
         public const int MaxFileBytes = 10485760;
         public const string Jpg = ".jpg";
         public const string Jpeg = ".jpeg";
