@@ -1,3 +1,4 @@
+using ComicBookRegistry.Application.Mapping;
 using ComicBookRegistry.Core.Repositories;
 using ComicBookRegistry.Domain.Services;
 using ComicBookRegistry.Domain.Utilities;
@@ -24,6 +25,8 @@ namespace ComicBookRegistry.UI
                     services.AddScoped<ComicBookPhotoService>();
                     services.AddScoped<FileUtils>();
                     services.AddScoped<FileValidator>();
+
+                    services.AddScoped<FileInfoToFileToUploadDtoMapper>();
 
                     services.AddScoped<OpenFileDialog>();
                     services.AddScoped<ComicBookModalWindow>();
