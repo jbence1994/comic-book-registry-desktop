@@ -19,7 +19,7 @@ namespace ComicBookRegistry.Domain.Tests.Validation
         [Test]
         public void ValidateTest_HappyPath()
         {
-            var file = FileInfoTestBuilder.Default;
+            var file = FileToUploadDtoTestBuilder.Default;
 
             Assert.DoesNotThrow(() => _fileValidator.Validate(file));
         }
@@ -27,7 +27,7 @@ namespace ComicBookRegistry.Domain.Tests.Validation
         [Test]
         public void ValidateTest_UnhappyPath_ShouldThrowNullFileException()
         {
-            var file = FileInfoTestBuilder.Null;
+            var file = FileToUploadDtoTestBuilder.Null;
 
             Assert.That(
                 () => _fileValidator.Validate(file),
@@ -38,7 +38,7 @@ namespace ComicBookRegistry.Domain.Tests.Validation
         [Test]
         public void ValidateTest_UnhappyPath_ShouldThrowEmptyFileException()
         {
-            var file = FileInfoTestBuilder.Empty;
+            var file = FileToUploadDtoTestBuilder.Empty;
 
             Assert.That(
                 () => _fileValidator.Validate(file),
@@ -49,7 +49,7 @@ namespace ComicBookRegistry.Domain.Tests.Validation
         [Test]
         public void ValidateTest_UnhappyPath_ShouldThrowMaximumFileSizeExceededException()
         {
-            var file = FileInfoTestBuilder.Large;
+            var file = FileToUploadDtoTestBuilder.Large;
 
             Assert.That(
                 () => _fileValidator.Validate(file),
@@ -60,7 +60,7 @@ namespace ComicBookRegistry.Domain.Tests.Validation
         [Test]
         public void ValidateTest_UnhappyPath_ShouldThrowInvalidFileTypeException()
         {
-            var file = FileInfoTestBuilder.WithInvalidFileType;
+            var file = FileToUploadDtoTestBuilder.WithInvalidFileType;
 
             Assert.That(
                 () => _fileValidator.Validate(file),

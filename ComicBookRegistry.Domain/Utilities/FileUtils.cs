@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComicBookRegistry.Application.Dtos;
+using System;
 using System.IO;
 
 namespace ComicBookRegistry.Domain.Utilities
@@ -18,10 +19,10 @@ namespace ComicBookRegistry.Domain.Utilities
             }
         }
 
-        public string StoreToFileSystem(FileInfo file, string uploadsDirectoryPath)
+        public string StoreToFileSystem(FileToUploadDto file, string uploadsDirectoryPath)
         {
             var fileName = $"{Guid.NewGuid()}{Path.GetExtension(file.Name)}";
-            var sourcePath = file.FullName;
+            var sourcePath = file.FullQualifiedPathWithFileName;
             var destinationPath = Path.Combine(uploadsDirectoryPath, fileName);
             File.Copy(sourcePath, destinationPath);
             return fileName;

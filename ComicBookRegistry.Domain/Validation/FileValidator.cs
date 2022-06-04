@@ -1,4 +1,5 @@
-﻿using ComicBookRegistry.Domain.Constants;
+﻿using ComicBookRegistry.Application.Dtos;
+using ComicBookRegistry.Domain.Constants;
 using ComicBookRegistry.Domain.Exceptions;
 using System.IO;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace ComicBookRegistry.Domain.Validation
             FileConstants.Bmp,
         };
 
-        public void Validate(FileInfo file)
+        public void Validate(FileToUploadDto file)
         {
             if (file == null)
             {

@@ -1,4 +1,5 @@
-﻿using ComicBookRegistry.Domain.Services;
+﻿using ComicBookRegistry.Application.Dtos;
+using ComicBookRegistry.Domain.Services;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -29,9 +30,15 @@ namespace ComicBookRegistry.UI.ModalWindows
                 var fileName = _openFileDialog.FileName;
                 var fileToUploadWithFullSourcePath = Path.GetFullPath(fileName);
                 var file = new FileInfo(fileToUploadWithFullSourcePath);
+                var photoToUploadDto = new FileToUploadDto
+                {
+                    Name = file.Name,
+                    FullQualifiedPathWithFileName = file.FullName,
+                    Length = file.Length
+                };
                 var contentRootPath = System.Windows.Forms.Application.StartupPath;
 
-                var photo = _comicBookPhotoService.UploadPhoto(contentRootPath, file, 1);
+                var photo = _comicBookPhotoService.UploadPhoto(contentRootPath, photoToUploadDto, 1);
             }
         }
 

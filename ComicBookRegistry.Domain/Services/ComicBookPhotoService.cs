@@ -1,4 +1,5 @@
-﻿using ComicBookRegistry.Core.Models;
+﻿using ComicBookRegistry.Application.Dtos;
+using ComicBookRegistry.Core.Models;
 using ComicBookRegistry.Core.Repositories;
 using ComicBookRegistry.Domain.Constants;
 using ComicBookRegistry.Domain.Exceptions;
@@ -41,7 +42,7 @@ namespace ComicBookRegistry.Domain.Services
             return comicBookPhoto;
         }
 
-        public ComicBookPhoto UploadPhoto(string contentRootPath, FileInfo file, int id)
+        public ComicBookPhoto UploadPhoto(string contentRootPath, FileToUploadDto file, int id)
         {
             _fileValidator.Validate(file);
 

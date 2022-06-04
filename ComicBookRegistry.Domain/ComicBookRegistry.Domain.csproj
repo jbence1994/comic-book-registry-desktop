@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ComicBookRegistry.Application\ComicBookRegistry.Application.csproj" />
     <ProjectReference Include="..\ComicBookRegistry.Core\ComicBookRegistry.Core.csproj" />
   </ItemGroup>
 

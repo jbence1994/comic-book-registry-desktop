@@ -1,6 +1,7 @@
 using ComicBookRegistry.Core.Repositories;
 using ComicBookRegistry.Domain.Services;
 using ComicBookRegistry.Domain.Utilities;
+using ComicBookRegistry.Domain.Validation;
 using ComicBookRegistry.UI.ModalWindows;
 using ComicBookRegistry.UI.Windows;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,8 +21,9 @@ namespace ComicBookRegistry.UI
                 {
                     services.AddScoped<IComicBookRepository, MockComicBookRepository>();
 
-                    services.AddScoped<FileUtils>();
                     services.AddScoped<ComicBookPhotoService>();
+                    services.AddScoped<FileUtils>();
+                    services.AddScoped<FileValidator>();
 
                     services.AddScoped<OpenFileDialog>();
                     services.AddScoped<ComicBookModalWindow>();
