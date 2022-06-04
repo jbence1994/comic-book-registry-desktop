@@ -32,7 +32,7 @@
             this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
             this.groupBoxComicData = new System.Windows.Forms.GroupBox();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.textBoxISBN = new System.Windows.Forms.TextBox();
+            this.textBoxISSN = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
@@ -55,7 +55,7 @@
             // groupBoxComicData
             // 
             this.groupBoxComicData.Controls.Add(this.buttonCancel);
-            this.groupBoxComicData.Controls.Add(this.textBoxISBN);
+            this.groupBoxComicData.Controls.Add(this.textBoxISSN);
             this.groupBoxComicData.Controls.Add(this.buttonSave);
             this.groupBoxComicData.Controls.Add(this.textBoxTitle);
             this.groupBoxComicData.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -78,14 +78,14 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
-            // textBoxISBN
+            // textBoxISSN
             // 
-            this.textBoxISBN.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxISBN.Location = new System.Drawing.Point(6, 101);
-            this.textBoxISBN.Name = "textBoxISBN";
-            this.textBoxISBN.PlaceholderText = "ISBN szám";
-            this.textBoxISBN.Size = new System.Drawing.Size(390, 33);
-            this.textBoxISBN.TabIndex = 3;
+            this.textBoxISSN.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxISSN.Location = new System.Drawing.Point(6, 101);
+            this.textBoxISSN.Name = "textBoxISSN";
+            this.textBoxISSN.PlaceholderText = "ISSN szám";
+            this.textBoxISSN.Size = new System.Drawing.Size(390, 33);
+            this.textBoxISSN.TabIndex = 3;
             // 
             // buttonSave
             // 
@@ -132,7 +132,7 @@
         private System.Windows.Forms.GroupBox groupBoxComicData;
         private System.Windows.Forms.TextBox textBoxTitle;
         private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.TextBox textBoxISBN;
+        private System.Windows.Forms.TextBox textBoxISSN;
         private System.Windows.Forms.Button buttonCancel;
     }
 }
