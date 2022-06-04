@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public string ISBN { get; set; }
+        public string ISSN { get; set; }
         public ComicBookPhoto Photo { get; set; }
 
         public void InitializePhoto(string fileName)
