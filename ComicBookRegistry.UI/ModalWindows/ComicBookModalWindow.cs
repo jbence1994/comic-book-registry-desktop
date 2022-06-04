@@ -13,7 +13,11 @@ namespace ComicBookRegistry.UI.ModalWindows
 
         private void PictureBoxPhoto_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine("Uploading new photo for comic book.");
+            var openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                Debug.WriteLine("Uploading new photo for comic book.");
+            }
         }
 
         private void ButtonSave_Click(object sender, EventArgs e)
