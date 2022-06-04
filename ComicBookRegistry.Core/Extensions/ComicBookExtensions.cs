@@ -2,7 +2,7 @@
 
 namespace ComicBookRegistry.Core.Utilities
 {
-    public static class ComicBookUtils
+    public static class ComicBookExtensions
     {
         public static void InitializePhoto(this ComicBook comicBook, string fileName)
         {
