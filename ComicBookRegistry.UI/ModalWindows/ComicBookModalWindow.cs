@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComicBookRegistry.Domain.Services;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
@@ -7,26 +8,30 @@ namespace ComicBookRegistry.UI.ModalWindows
 {
     public partial class ComicBookModalWindow : Form
     {
-        public ComicBookModalWindow()
+        private readonly OpenFileDialog _openFileDialog;
+        private readonly ComicBookPhotoService _comicBookPhotoService;
+
+        public ComicBookModalWindow(
+            OpenFileDialog openFileDialog,
+            ComicBookPhotoService comicBookPhotoService
+        )
         {
             InitializeComponent();
+
+            _openFileDialog = openFileDialog;
+            _comicBookPhotoService = comicBookPhotoService;
         }
 
         private void PictureBoxPhoto_Click(object sender, EventArgs e)
         {
-            var openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            if (_openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                var sourcePathWithFileName = Path.GetFullPath(openFileDialog.FileName);
-                var fileName = Path.GetFileName(openFileDialog.FileName);
+                var fileName = _openFileDialog.FileName;
+                var fileToUploadWithFullSourcePath = Path.GetFullPath(fileName);
+                var file = new FileInfo(fileToUploadWithFullSourcePath);
+                var contentRootPath = System.Windows.Forms.Application.StartupPath;
 
-                var uploadsFolderPath = $"{System.Windows.Forms.Application.StartupPath}uploads\\comic_books";
-                if (!Directory.Exists(uploadsFolderPath))
-                {
-                    Directory.CreateDirectory(uploadsFolderPath);
-                }
-
-                File.Copy(sourcePathWithFileName, $"{uploadsFolderPath}\\{Guid.NewGuid()}.{Path.GetExtension(fileName)}");
+                var photo = _comicBookPhotoService.UploadPhoto(contentRootPath, file, 1);
             }
         }
 
