@@ -12,17 +12,17 @@ namespace ComicBookRegistry.Domain.Services
     public class ComicBookPhotoService
     {
         private readonly IComicBookRepository _comicBookRepository;
-        private readonly FileUtils _fileUtils;
+        private readonly FileSystemUtils _fileSystemUtils;
         private readonly FileValidator _fileValidator;
 
         public ComicBookPhotoService(
             IComicBookRepository comicBookRepository,
-            FileUtils fileUtils,
+            FileSystemUtils fileSystemUtils,
             FileValidator fileValidator
         )
         {
             _comicBookRepository = comicBookRepository;
-            _fileUtils = fileUtils;
+            _fileSystemUtils = fileSystemUtils;
             _fileValidator = fileValidator;
         }
 
@@ -32,7 +32,7 @@ namespace ComicBookRegistry.Domain.Services
 
             try
             {
-                comicBookPhoto = _fileUtils.ReadAllBytes($"{FileConstants.ComicBookPhotoUploadsDirectoryPath}/{fileName}");
+                comicBookPhoto = _fileSystemUtils.ReadAllBytes($"{FileConstants.ComicBookPhotoUploadsDirectoryPath}/{fileName}");
             }
             catch
             {
@@ -55,9 +55,9 @@ namespace ComicBookRegistry.Domain.Services
 
             var uploadsDirectoryPath = Path.Combine(contentRootPath, FileConstants.ComicBookPhotoUploadsDirectoryPath);
 
-            _fileUtils.CreateUploadsDirectoryIfNotExist(uploadsDirectoryPath);
+            _fileSystemUtils.CreateUploadsDirectoryIfNotExist(uploadsDirectoryPath);
 
-            var fileName = _fileUtils.StoreToFileSystem(file, uploadsDirectoryPath);
+            var fileName = _fileSystemUtils.StoreToFileSystem(file, uploadsDirectoryPath);
             comicBook.InitializePhoto(fileName);
 
             // TODO: Persist photo's name to database.

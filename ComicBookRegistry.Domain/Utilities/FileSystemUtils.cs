@@ -4,7 +4,7 @@ using System.IO;
 
 namespace ComicBookRegistry.Domain.Utilities
 {
-    public class FileUtils
+    public class FileSystemUtils
     {
         public byte[] ReadAllBytes(string path)
         {
