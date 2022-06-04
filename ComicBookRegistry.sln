@@ -9,9 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7169907E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComicBookRegistry.UI", "ComicBookRegistry.UI\ComicBookRegistry.UI.csproj", "{00D50AFB-1B33-4E3B-812D-EBC15B4C62EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComicBookRegistry.Domain", "ComicBookRegistry.Domain\ComicBookRegistry.Domain.csproj", "{784EECB5-DAB1-4632-B486-12579BF04E21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComicBookRegistry.Domain", "ComicBookRegistry.Domain\ComicBookRegistry.Domain.csproj", "{784EECB5-DAB1-4632-B486-12579BF04E21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComicBookRegistry.Core", "ComicBookRegistry.Core\ComicBookRegistry.Core.csproj", "{0BEECC1A-8A21-4FE5-BF6D-C449C09749AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComicBookRegistry.Core", "ComicBookRegistry.Core\ComicBookRegistry.Core.csproj", "{0BEECC1A-8A21-4FE5-BF6D-C449C09749AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComicBookRegistry.Domain.Tests", "ComicBookRegistry.Domain.Tests\ComicBookRegistry.Domain.Tests.csproj", "{BFD7C606-4F2F-44B3-AE09-2C2D472D070B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{0BEECC1A-8A21-4FE5-BF6D-C449C09749AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BEECC1A-8A21-4FE5-BF6D-C449C09749AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BEECC1A-8A21-4FE5-BF6D-C449C09749AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFD7C606-4F2F-44B3-AE09-2C2D472D070B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFD7C606-4F2F-44B3-AE09-2C2D472D070B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFD7C606-4F2F-44B3-AE09-2C2D472D070B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFD7C606-4F2F-44B3-AE09-2C2D472D070B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{00D50AFB-1B33-4E3B-812D-EBC15B4C62EE} = {25044FAD-E81F-41ED-9F0D-F45B3F4522B0}
 		{784EECB5-DAB1-4632-B486-12579BF04E21} = {25044FAD-E81F-41ED-9F0D-F45B3F4522B0}
 		{0BEECC1A-8A21-4FE5-BF6D-C449C09749AA} = {25044FAD-E81F-41ED-9F0D-F45B3F4522B0}
+		{BFD7C606-4F2F-44B3-AE09-2C2D472D070B} = {7169907E-05E3-4A29-8698-86A740042DC4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35C616C5-8CF4-4915-8EFB-FBC419A3AA93}
