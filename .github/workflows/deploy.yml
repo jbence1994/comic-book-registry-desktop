@@ -4,7 +4,7 @@ on:
     tags:
       - "v*"
 env:
-  PROJECT_PATH: EventExplorer.Desktop/EventExplorer.Desktop.csproj
+  PROJECT_PATH: ComicBookRegistry.UI/ComicBookRegistry.UI.csproj
 
 jobs:
   deploy:
