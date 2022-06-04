@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ComicBookRegistry.UI.ModalWindows
@@ -16,7 +17,16 @@ namespace ComicBookRegistry.UI.ModalWindows
             var openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                Debug.WriteLine("Uploading new photo for comic book.");
+                var sourcePathWithFileName = Path.GetFullPath(openFileDialog.FileName);
+                var fileName = Path.GetFileName(openFileDialog.FileName);
+
+                var uploadsFolderPath = $"{System.Windows.Forms.Application.StartupPath}uploads\\comic_books";
+                if (!Directory.Exists(uploadsFolderPath))
+                {
+                    Directory.CreateDirectory(uploadsFolderPath);
+                }
+
+                File.Copy(sourcePathWithFileName, $"{uploadsFolderPath}\\{Guid.NewGuid()}.{Path.GetExtension(fileName)}");
             }
         }
 
