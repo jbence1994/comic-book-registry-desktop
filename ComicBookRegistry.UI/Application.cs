@@ -23,8 +23,8 @@ namespace ComicBookRegistry.UI
                     services.AddScoped<IComicBookRepository, MockComicBookRepository>();
 
                     services.AddScoped<ComicBookPhotoService>();
-                    services.AddScoped<FileSystemUtils>();
-                    services.AddScoped<FileValidator>();
+                    services.AddScoped<IFileUtils, FileSystemUtils>();
+                    services.AddScoped<IFileValidator, FileValidator>();
 
                     services.AddScoped<FileInfoToFileToUploadDtoMapper>();
 
