@@ -2,7 +2,7 @@
 
 namespace ComicBookRegistry.Domain.Tests.TestBuilders
 {
-    public class FileToUploadDtoTestBuilder
+    public static class FileToUploadDtoTestBuilder
     {
         public static FileToUploadDto Default => Build();
         public static FileToUploadDto Null => null;
