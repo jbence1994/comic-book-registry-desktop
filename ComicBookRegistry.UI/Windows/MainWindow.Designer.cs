@@ -28,7 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.buttonAddComicBook = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // buttonAddComicBook
+            // 
+            this.buttonAddComicBook.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonAddComicBook.Location = new System.Drawing.Point(12, 674);
+            this.buttonAddComicBook.Name = "buttonAddComicBook";
+            this.buttonAddComicBook.Size = new System.Drawing.Size(227, 43);
+            this.buttonAddComicBook.TabIndex = 0;
+            this.buttonAddComicBook.Text = "Képregény hozzáadása";
+            this.buttonAddComicBook.UseVisualStyleBackColor = true;
+            this.buttonAddComicBook.Click += new System.EventHandler(this.ButtonAddComic_Click);
             // 
             // MainWindow
             // 
@@ -36,6 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.buttonAddComicBook);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Képregény nyilvántartó";
@@ -44,5 +57,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button buttonAddComicBook;
     }
 }
