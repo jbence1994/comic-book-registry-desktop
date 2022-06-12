@@ -5,24 +5,23 @@ using ComicBookRegistry.Domain.Constants;
 using ComicBookRegistry.Domain.Exceptions;
 using ComicBookRegistry.Domain.Utilities;
 using ComicBookRegistry.Domain.Validation;
-using System.IO;
 
 namespace ComicBookRegistry.Domain.Services
 {
     public class ComicBookPhotoService
     {
         private readonly IComicBookRepository _comicBookRepository;
-        private readonly FileSystemUtils _fileSystemUtils;
+        private readonly IFileUtils _fileUtils;
         private readonly FileValidator _fileValidator;
 
         public ComicBookPhotoService(
             IComicBookRepository comicBookRepository,
-            FileSystemUtils fileSystemUtils,
+            IFileUtils fileSystemUtils,
             FileValidator fileValidator
         )
         {
             _comicBookRepository = comicBookRepository;
-            _fileSystemUtils = fileSystemUtils;
+            _fileUtils = fileSystemUtils;
             _fileValidator = fileValidator;
         }
 
@@ -32,7 +31,7 @@ namespace ComicBookRegistry.Domain.Services
 
             try
             {
-                comicBookPhoto = _fileSystemUtils.ReadAllBytes($"{FileConstants.ComicBookPhotoUploadsDirectoryPath}/{fileName}");
+                comicBookPhoto = _fileUtils.ReadAllBytes($"{FileConstants.ComicBookPhotoUploadsDirectoryPath}/{fileName}");
             }
             catch
             {
@@ -53,11 +52,9 @@ namespace ComicBookRegistry.Domain.Services
                 throw new ComicBookNotFoundException(id);
             }
 
-            var uploadsDirectoryPath = Path.Combine(contentRootPath, FileConstants.ComicBookPhotoUploadsDirectoryPath);
+            var uploadsDirectoryPath = _fileUtils.CreateUploadsDirectory(contentRootPath);
 
-            _fileSystemUtils.CreateUploadsDirectoryIfNotExist(uploadsDirectoryPath);
-
-            var fileName = _fileSystemUtils.StoreToFileSystem(file, uploadsDirectoryPath);
+            var fileName = _fileUtils.Store(file, uploadsDirectoryPath);
             comicBook.InitializePhoto(fileName);
 
             // TODO: Persist photo's name to database.
