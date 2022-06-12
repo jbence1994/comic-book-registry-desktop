@@ -50,7 +50,7 @@
             this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxPhoto.TabIndex = 0;
             this.pictureBoxPhoto.TabStop = false;
-            this.pictureBoxPhoto.Click += new System.EventHandler(this.PictureBoxComicBookCover_Click);
+            this.pictureBoxPhoto.Click += new System.EventHandler(this.PictureBoxPhoto_Click);
             // 
             // groupBoxComicData
             // 
