@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace ComicBookRegistry.Domain.Validation
 {
-    public class FileValidator
+    public class FileValidator : IFileValidator
     {
         private readonly string[] _acceptedExtensions =
         {

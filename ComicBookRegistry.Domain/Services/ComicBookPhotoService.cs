@@ -12,12 +12,12 @@ namespace ComicBookRegistry.Domain.Services
     {
         private readonly IComicBookRepository _comicBookRepository;
         private readonly IFileUtils _fileUtils;
-        private readonly FileValidator _fileValidator;
+        private readonly IFileValidator _fileValidator;
 
         public ComicBookPhotoService(
             IComicBookRepository comicBookRepository,
             IFileUtils fileSystemUtils,
-            FileValidator fileValidator
+            IFileValidator fileValidator
         )
         {
             _comicBookRepository = comicBookRepository;
