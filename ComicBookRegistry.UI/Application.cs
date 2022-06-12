@@ -37,7 +37,7 @@ namespace ComicBookRegistry.UI
             System.Windows.Forms.Application.SetHighDpiMode(HighDpiMode.SystemAware);
             System.Windows.Forms.Application.EnableVisualStyles();
             System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-            System.Windows.Forms.Application.Run(host.Services.GetRequiredService<ComicBookModalWindow>());
+            System.Windows.Forms.Application.Run(host.Services.GetRequiredService<MainWindow>());
         }
     }
 }
