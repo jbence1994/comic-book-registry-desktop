@@ -2,6 +2,7 @@
 using ComicBookRegistry.Core.Repositories;
 using ComicBookRegistry.Domain.Exceptions;
 using ComicBookRegistry.Domain.Services;
+using ComicBookRegistry.Domain.Tests.Constants;
 using ComicBookRegistry.Domain.Tests.TestBuilders;
 using ComicBookRegistry.Domain.Utilities;
 using ComicBookRegistry.Domain.Validation;
@@ -61,7 +62,7 @@ namespace ComicBookRegistry.Domain.Tests.Services
         [Test]
         public void UploadPhotoTest_HappyPath()
         {
-            var comicBook = ComicBookTestBuilder.Dummy;
+            var comicBook = ComicBookTestBuilder.Default;
 
             _comicBookRepository
                 .Setup(comicBookRepository => comicBookRepository.GetComicBook(It.IsAny<int>()))
@@ -73,7 +74,7 @@ namespace ComicBookRegistry.Domain.Tests.Services
                         It.IsAny<string>()
                     )
                 )
-                .Returns("00000000-0000-0000-0000-000000000000.jpg");
+                .Returns(TestConstants.PhotoFileName);
 
             var uploadedPhoto = _comicBookPhotoService.UploadPhoto(
                 It.IsAny<string>(),
