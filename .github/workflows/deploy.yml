@@ -28,7 +28,7 @@ jobs:
           dir
           cd publish
           dir
-      - uses: csexton/release-asset-action@v2
+      - uses: csexton/release-asset-action@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           pattern: ./publish/*.*
