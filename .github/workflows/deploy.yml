@@ -10,8 +10,8 @@ jobs:
   deploy:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-dotnet@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 5.0.x
       - run: dotnet restore  ${{ env.PROJECT_PATH }} -r win-x64
@@ -28,7 +28,7 @@ jobs:
           dir
           cd publish
           dir
-      - uses: csexton/release-asset-action@v2
+      - uses: csexton/release-asset-action@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           pattern: ./publish/*.*
